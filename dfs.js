@@ -20,3 +20,10 @@ function graphtraversal(vertex) {
   }
   return visited;
 }
+function findnearby(p, arr, visited) {
+  var nearby = [];
+  for (var i = 0; i < arr[p].length; i++) {
+    if (arr[p][i] == 1 && !visited[i]) nearby.push(i);
+  }
+  return nearby;
+}
